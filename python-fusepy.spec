@@ -3,6 +3,7 @@
 Summary:	Python interface to FUSE (Filesystem in USErspace)
 Summary(pl.UTF-8):	Pythonowy interfejs do FUSE (systemu plików w przestrzeni użytkownika)
 Name:		python-%{module}
+# it's svn revision
 Version:	0.r20
 Release:	1
 License:	GPL
@@ -12,6 +13,7 @@ Source0:	http://fusepy.googlecode.com/svn/trunk/fuse.py
 URL:		http://fusepy.googlecode.com/
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
+Requires:	iconv
 Requires:	libfuse
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -24,7 +26,7 @@ Pythonowy interfejs do FUSE (Filesystem in USErspace - systemu plików
 w przestrzeni użytkownika).
 
 %prep
-%setup -q -c
+%setup -q -T -c
 
 %build
 
@@ -42,4 +44,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{py_sitedir}/*.py[co]
+%{py_sitescriptdir}/*.py[co]
