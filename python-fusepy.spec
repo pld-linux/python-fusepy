@@ -5,7 +5,7 @@ Summary(pl.UTF-8):	Pythonowy interfejs do FUSE (systemu plik√≥w w przestrzeni u≈
 Name:		python-%{module}
 # it's svn revision
 Version:	0.r20
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Python
 Source0:	http://fusepy.googlecode.com/svn/trunk/fuse.py
